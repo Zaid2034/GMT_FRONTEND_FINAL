@@ -9,9 +9,7 @@ export function UserContextProvider({children}) {
   const [isLoading, setIsLoading] = useState (false);
   const token = localStorage.getItem ('token');
   useEffect(()=>{
-    console.log('In user context use Effect')
-    console.log("token is:",token)
-    if (token && token != 'LoggedInWithGoogle') {
+    if (token!='undefined' && token != 'LoggedInWithGoogle') {
         try{
           setIsLoading (true);
           const res = axios
@@ -25,7 +23,6 @@ export function UserContextProvider({children}) {
               setisLoggedIn (true);
             }
           });
-          setIsLoading(false)
         }catch(err){
           setIsLoading(false)
           alert (`${err} ${err.response.data.message}`);

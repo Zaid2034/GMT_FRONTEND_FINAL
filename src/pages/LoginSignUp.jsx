@@ -142,14 +142,14 @@ const LoginSignUpForm = () => {
 };
   return (
 
-    <div className="flex items-center justify-center md:bg-gray-200" >
+  <div className="flex items-center justify-center md:bg-gray-200" >
     {isLoading ? (
       <div className="min-h-screen flex items-center justify-center">
         <l-helix size="45" speed="2.5" color="#FE8C00" />
       </div>
       
     ):(
-      <form className="w-[320px] sm:w-[375px] max-w-md min-h-screen px-6 py-4 bg-white md:shadow-md" onSubmit={handleSubmit}>
+      <form className="w-[320px] sm:w-[375px] max-w-md min-h-dvh px-6 py-4 bg-white md:shadow-md" onSubmit={handleSubmit}>
         <h4 className="mb-2 text-3xl font-semibold mt-8">{isLoginSignUp==='login'?"Login to your account":"Create your new account"}</h4>
         <p className="text-[#878787] font-medium text-sm">{isLoginSignUp === 'signup'? 'Create an account to start looking for the food you like': 'Please signin to your account'}</p>
         

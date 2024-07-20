@@ -15,6 +15,7 @@ const SuccessLogin = () => {
         return () => {
         };
     },[isLoggedIn])
+    
     return(
         <div>
             <div className='flex justify-center  bg-black h-screen'>

@@ -10,6 +10,7 @@ export function UserContextProvider({children}) {
   const token = localStorage.getItem ('token');
   useEffect(()=>{
     console.log('In user context use Effect')
+    console.log("token is:",token)
     if (token && token != 'LoggedInWithGoogle') {
         try{
           setIsLoading (true);
@@ -24,6 +25,7 @@ export function UserContextProvider({children}) {
               setisLoggedIn (true);
             }
           });
+          setIsLoading(false)
         }catch(err){
           setIsLoading(false)
           alert (`${err} ${err.response.data.message}`);

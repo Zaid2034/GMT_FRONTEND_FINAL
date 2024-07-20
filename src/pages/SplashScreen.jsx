@@ -27,7 +27,7 @@ const SplashScreen = () => {
     if(isLoading){
         console.log("Is loading is true")
         return (
-            <div className="min-h-dvh flex items-center justify-center">
+            <div className="h-dvh flex items-center justify-center">
                 <l-helix size="45" speed="2.5" color="#FE8C00" />
             </div>
         )
